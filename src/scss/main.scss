@@ -1,0 +1,101 @@
+@use "resets";
+@use "colors";
+@use "mq";
+
+body {
+  display: grid;
+  place-content: start center;
+  padding: 2rem 1.5rem;
+  background: colors.$bg-body;
+  font: 400 0.9375rem "Inter", sans-serif;
+  color: colors.$white-75;
+
+  @include mq.large {
+    place-content: center;
+  }
+}
+
+.card {
+  overflow: hidden;
+  max-width: 31.25rem;
+  background: colors.$bg-card;
+  border-radius: 7px;
+
+  @include mq.large {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 70rem;
+  }
+}
+
+.img-wrapper {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(
+      darken(colors.$soft-violet, 20),
+      0.5
+    ); //Yeah I know, weird but it somehow looks more like the design :P
+  }
+}
+
+.text {
+  padding: clamp(2.5rem, -3.63rem + 24.53vw, 4.8rem)
+    clamp(1.25rem, -5.46rem + 31vw, 4.8rem);
+  text-align: center;
+
+  @include mq.large {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    max-width: 35.625rem;
+  }
+
+  &__title {
+    font-size: clamp(1.4rem, 0.37rem + 5.5vw, 2.2rem);
+    font-weight: 700;
+
+    & > span {
+      color: colors.$soft-violet;
+    }
+  }
+
+  &__description {
+    margin-top: 1rem;
+    color: colors.$white-60;
+    line-height: 1.6;
+  }
+}
+
+.stat-wrapper {
+  margin-top: 2.25rem;
+  display: grid;
+  gap: clamp(2rem, -3.33rem + 21.33vw, 4rem);
+
+  @include mq.medium {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include mq.large {
+    justify-content: start;
+  }
+}
+
+.stat {
+  &__number {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &__category {
+    margin-top: 0.6em;
+    font: 400 0.75rem "Lexend Deca", sans-serif;
+    color: colors.$white-60;
+    text-transform: uppercase;
+  }
+}
