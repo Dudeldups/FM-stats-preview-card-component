@@ -19,7 +19,7 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
 
 ### Links
 
-- [Solution on Frontend Mentor]()
+- [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/scss-responsive-stats-preview-component-K3eJshbwzj)
 - [Live site](https://dudeldups.github.io/FM-stats-preview-card-component/)
 
 ## My process

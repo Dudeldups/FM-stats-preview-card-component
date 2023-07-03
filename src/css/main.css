@@ -118,6 +118,7 @@ body {
 .text__title {
   font-size: clamp(1.4rem, 0.37rem + 5.5vw, 2.2rem);
   font-weight: 700;
+  color: hsl(0, 0%, 100%);
 }
 .text__title > span {
   color: hsl(277, 64%, 61%);
@@ -146,6 +147,7 @@ body {
 }
 
 .stat__number {
+  color: hsl(0, 0%, 100%);
   font-size: 1.5rem;
   font-weight: 700;
 }
